@@ -1,0 +1,62 @@
+html{
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+}
+ul,
+li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+p{
+    margin: 0;
+}
+.container{
+    max-width: 1790px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.container-fluid{
+    max-width: 1490px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+body{
+    @extend %gilroy-bold;
+    font-size: 18px;
+    color: #fff;
+}
+.title{
+    @extend %chronicledisplay-semibold;
+    font-size: 64px;
+    line-height: 77px;
+}
+.subtitle{
+    @extend %gilroy-extrabold;
+    font-size: 18px;
+    color: $yellow;
+    margin-left: 95px;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        background-color: $yellow;
+        width: 72px;
+        height: 2px;
+        top: 14px;
+        left: -91px;
+    }
+}
